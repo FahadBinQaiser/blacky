@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 
+const MENU_ITEMS = [
+  { label: "Features", href: "#features" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Customers", href: "#customers" },
+  { label: "Sign In", href: "#signin" },
+];
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const linkClass =
+    "text-sm font-medium text-white hover:text-gray-300 transition-colors";
 
   return (
     <nav className="absolute top-0 left-0 right-0 z-50 px-4 py-6">
@@ -10,24 +19,11 @@ export default function Navbar() {
           <div className="text-2xl font-bold text-white">Blacky</div>
 
           <div className="hidden md:flex items-center gap-8">
-            <a
-              href="#features"
-              className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
-            >
-              Features
-            </a>
-            <a
-              href="#pricing"
-              className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
-            >
-              Pricing
-            </a>
-            <a
-              href="#customers"
-              className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
-            >
-              Customers
-            </a>
+            {MENU_ITEMS.slice(0, 3).map((item) => (
+              <a key={item.href} href={item.href} className={linkClass}>
+                {item.label}
+              </a>
+            ))}
           </div>
         </div>
 
@@ -60,25 +56,17 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Always in DOM for transition */}
       <div
         className={`md:hidden mt-4 overflow-hidden rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm transition-all duration-300 ${
           isOpen ? "max-h-96 opacity-100 p-4" : "max-h-0 opacity-0 p-0"
         }`}
       >
         <div className="flex flex-col gap-4">
-          <a href="#features" className="text-sm font-medium text-white">
-            Features
-          </a>
-          <a href="#pricing" className="text-sm font-medium text-white">
-            Pricing
-          </a>
-          <a href="#customers" className="text-sm font-medium text-white">
-            Customers
-          </a>
-          <a href="#signin" className="text-sm font-medium text-white">
-            Sign In
-          </a>
+          {MENU_ITEMS.map((item) => (
+            <a key={item.href} href={item.href} className={linkClass}>
+              {item.label}
+            </a>
+          ))}
         </div>
       </div>
     </nav>
