@@ -5,7 +5,7 @@ export default function HeroSection() {
     <section className="relative hero h-screen text-white overflow-hidden px-4 py-4 sm:py-8 md:py-12 lg:py-20 xl:py-32">
       <div className="mx-auto max-w-5xl flex flex-col justify-center items-center h-full space-y-12">
         <div className="space-y-6 text-center">
-          <h1 className="mx-auto text-balance max-w-4xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+          <h1 className="mx-auto text-balance max-w-4xl text-4xl md:text-5xl lg:text-6xl font-bold">
             <span className="text-[#afbefd]">Close 60% more demos {""}</span>
             without hiring sales reps
           </h1>
