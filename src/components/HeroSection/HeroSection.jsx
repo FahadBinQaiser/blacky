@@ -1,4 +1,5 @@
 import React from "react";
+import GradientButton from "../UiComponents/GradientButton/GradientButton";
 
 export default function HeroSection() {
   return (
@@ -17,16 +18,7 @@ export default function HeroSection() {
         </div>
 
         <div className="flex flex-col sm:flex-row justify-center gap-3">
-          <button
-            className="relative overflow-hidden rounded-full px-6 py-3 text-base font-semibold text-white"
-            style={{
-              background:
-                "linear-gradient(to bottom, #361893 40%, #afbefd 130%)",
-              backdropFilter: "blur(20px)",
-            }}
-          >
-            Analyze My Demos
-          </button>
+          <GradientButton />
           <button className="rounded-full border border-gray-300 bg-[white] text-black px-6 py-3 text-base font-semibold transition-colors hover:bg-gray-50">
             See How It Works
           </button>
