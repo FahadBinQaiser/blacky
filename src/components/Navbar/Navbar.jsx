@@ -28,16 +28,16 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <button className="hidden sm:block text-sm font-semibold text-white hover:text-gray-300 transition-colors">
+          <button className="hidden cursor-pointer sm:block text-sm font-semibold text-white hover:text-gray-300 transition-colors">
             Sign In
           </button>
-          <button className="rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors">
+          <button className="rounded-full cursor-pointer border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors">
             See how it works
           </button>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white"
+            className="md:hidden cursor-pointer text-white"
           >
             <svg
               className="h-6 w-6"
