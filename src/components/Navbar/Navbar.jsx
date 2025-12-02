@@ -12,26 +12,20 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <a
               href="#features"
-              className="text-sm font-medium text-gray-300
-              hover:text-white transition-colors"
+              className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
             >
-              {" "}
               Features
             </a>
             <a
               href="#pricing"
-              className="text-sm font-medium text-gray-300
-              hover:text-white transition-colors"
+              className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
             >
-              {" "}
               Pricing
             </a>
             <a
               href="#customers"
-              className="text-sm font-medium text-gray-300
-              hover:text-white transition-colors"
+              className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
             >
-              {" "}
               Customers
             </a>
           </div>
@@ -66,24 +60,27 @@ export default function Navbar() {
         </div>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden mt-4 rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm p-4">
-          <div className="flex flex-col gap-4">
-            <a href="#features" className="text-sm font-medium text-white">
-              Features
-            </a>
-            <a href="#pricing" className="text-sm font-medium text-white">
-              Pricing
-            </a>
-            <a href="#customers" className="text-sm font-medium text-white">
-              Customers
-            </a>
-            <a href="#signin" className="text-sm font-medium text-white">
-              Sign In
-            </a>
-          </div>
+      {/* Always in DOM for transition */}
+      <div
+        className={`md:hidden mt-4 overflow-hidden rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm transition-all duration-300 ${
+          isOpen ? "max-h-96 opacity-100 p-4" : "max-h-0 opacity-0 p-0"
+        }`}
+      >
+        <div className="flex flex-col gap-4">
+          <a href="#features" className="text-sm font-medium text-white">
+            Features
+          </a>
+          <a href="#pricing" className="text-sm font-medium text-white">
+            Pricing
+          </a>
+          <a href="#customers" className="text-sm font-medium text-white">
+            Customers
+          </a>
+          <a href="#signin" className="text-sm font-medium text-white">
+            Sign In
+          </a>
         </div>
-      )}
+      </div>
     </nav>
   );
 }
