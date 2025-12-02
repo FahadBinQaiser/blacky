@@ -6,27 +6,35 @@ export default function Navbar() {
   return (
     <nav className="absolute top-0 left-0 right-0 z-50 px-4 py-6">
       <div className="mx-auto flex max-w-5xl items-center justify-between">
-        <div className="text-xl font-bold text-white">Blacky</div>
+        <div className="flex items-center gap-20">
+          <div className="text-2xl font-bold text-white">Blacky</div>
 
-        <div className="hidden md:flex items-center gap-8">
-          <a
-            href="#features"
-            className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
-          >
-            Features
-          </a>
-          <a
-            href="#pricing"
-            className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
-          >
-            Pricing
-          </a>
-          <a
-            href="#customers"
-            className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
-          >
-            Customers
-          </a>
+          <div className="hidden md:flex items-center gap-8">
+            <a
+              href="#features"
+              className="text-sm font-medium text-gray-300
+              hover:text-white transition-colors"
+            >
+              {" "}
+              Features
+            </a>
+            <a
+              href="#pricing"
+              className="text-sm font-medium text-gray-300
+              hover:text-white transition-colors"
+            >
+              {" "}
+              Pricing
+            </a>
+            <a
+              href="#customers"
+              className="text-sm font-medium text-gray-300
+              hover:text-white transition-colors"
+            >
+              {" "}
+              Customers
+            </a>
+          </div>
         </div>
 
         <div className="flex items-center gap-3">
@@ -34,7 +42,7 @@ export default function Navbar() {
             Sign In
           </button>
           <button className="rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors">
-            Start Free
+            See how it works
           </button>
 
           <button
