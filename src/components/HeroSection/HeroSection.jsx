@@ -19,7 +19,7 @@ export default function HeroSection() {
 
         <div className="flex flex-col sm:flex-row justify-center gap-3">
           <GradientButton />
-          <button className="rounded-full border border-gray-300 bg-[white] text-black px-6 py-3 text-base font-semibold transition-colors hover:bg-gray-50">
+          <button className="rounded-full border border-gray-300 bg-[white] text-black px-6 py-3 text-base font-medium cursor-pointer transition-colors hover:bg-gray-50">
             See How It Works
           </button>
         </div>
