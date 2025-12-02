@@ -37,7 +37,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white"
+            className="md:hidden cursor-pointer text-white"
           >
             <svg
               className="h-6 w-6"
