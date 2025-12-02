@@ -1,0 +1,4 @@
+.gradient-button {
+  background: linear-gradient(to bottom, #361893 40%, #afbefd 130%);
+  backdrop-filter: blur(20px);
+}
